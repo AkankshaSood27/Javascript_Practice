@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <input type="button" id="res" value="Sum">
+    <p id="result"></p>
+    <script>
+        function sumOfDigits(){
+            var n=parseInt(document.getElementById("num").value);
+            var sum=0;
+            while(n>0){
+                sum+=(n%10);
+                n=Math.floor(n/10);
+            }
+            document.getElementById("result").innerHTML="<h5>"+parseInt(sum)+"</h5>"
+        }
+        document.getElementById("res").addEventListener("click",sumOfDigits);
+    </script>
+</body>
+</html>

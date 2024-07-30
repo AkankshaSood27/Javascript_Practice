@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Number 1:<input type="text" id="num1"><br>
+    Number 2:<input type="text" id="num2"><br>
+    Number 3:<input type="text" id="num3"><br>
+    <br>
+    <nbsp><nbsp><nbsp><nbsp><nbsp><nbsp>
+    <input type="button" id="show" value="Greatest" onclick="show()">
+    <span id="great"></span>
+    
+    <script>
+        function show(){
+            var n1=parseInt(document.getElementById("num1").value);
+            var n2=parseInt(document.getElementById("num2").value);
+            var n3=parseInt(document.getElementById("num3").value);
+            var greatest;
+
+            if(n1>n2){
+                if(n1>n3){
+                    greatest=n1;
+                }
+                else{
+                    greatest=n3;
+                }
+            }
+            else{
+                if(n2>n3){
+                    greatest=n2;
+                }
+                else{
+                    greatest=n3;
+                }
+            }
+        document.getElementById("great").innerHTML=greatest;
+        }
+    </script>
+
+</body>
+</html>

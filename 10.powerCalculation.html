@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter the base number: <input type="number" id="base"><br>
+    Enter the power you want to calculate: <input type="number" id="power"><br>
+    <input type="button" id="btn" value="Calculate"><br>
+    <p id="new"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            var b=parseInt(document.getElementById("base").value);
+            var pow=parseInt(document.getElementById("power").value);
+            var result=1;
+            for(var i=0;i<pow;i++){
+                result*=b;
+            }
+            document.getElementById("new").innerHTML=result;
+        }
+
+    );
+
+    </script>
+</body>
+</html>
